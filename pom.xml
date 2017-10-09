@@ -10,6 +10,13 @@
     <packaging>war</packaging>
 
 
+	<developers>
+		<developer>
+			<name>Andrei Lima</name>
+			<email>andrei.lc.ti@gmail.com</email>
+		</developer>
+	</developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
