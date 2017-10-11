@@ -43,7 +43,7 @@
  				<input id="preco" type="text" name="preco" class="form-control"
 						value="${filme.preco}"> --%>
  				<c:forEach items="${bindingResult.getFieldErrors('preco')}"
-						var="error"> --%>
+						var="error"> 
  								<span class="text-danger">${error.defaultMessage}</span> 
  				</c:forEach> 
 			</div> 
