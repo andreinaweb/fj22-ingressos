@@ -17,6 +17,10 @@ public class LugarForm {
     @NotNull
     private Integer posicao;
     private Integer salaId;
+    
+    public LugarForm() {
+    	
+    }
 
     public String getFileira() {
         return fileira;
