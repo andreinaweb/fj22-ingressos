@@ -44,6 +44,26 @@ public class SessaoController {
 	@Autowired
 	private Carrinho carrinho;
 	
+	
+	@GetMapping("/sessao/{id}/lugares")
+	public ModelAndView lugaresNaSessao(@PathVariable("id") Integer sessaoId){
+		
+		ModelAndView modelAndView = new ModelAndView("sessao/lugares");
+		
+		Sessao sessao = sessaoDao.findOne(sessaoId);
+		
+		Optional<ImagemCapa> imagemCapa = client.request(sessao.getFilme(), ImagemCapa.class);
+		
+		modelAndView.addObject("sessao", sessao);
+		modelAndView.addObject("carrinho", carrinho);		
+		modelAndView.addObject("imagemCapa", imagemCapa.orElse(new ImagemCapa()));		
+		modelAndView.addObject("tiposDeIngressos", TipoDeIngresso.values());
+		
+		return modelAndView;
+		
+	}
+	
+	
 	@GetMapping("/admin/sessao")
 	public ModelAndView form(@RequestParam("salaId") Integer salaId, SessaoForm form) {
 		
@@ -91,26 +111,6 @@ public class SessaoController {
 	return form(form.getSalaId(), form);
 	
 	}
-	
-	
-	@GetMapping("/sessao/{id}/lugares")
-	public ModelAndView lugaresNaSessao(@PathVariable("id") Integer sessaoId){
-		
-		ModelAndView modelAndView = new ModelAndView("sessao/lugares");
-		
-		Sessao sessao = sessaoDao.findOne(sessaoId);
-		
-		Optional<ImagemCapa> imagemCapa = client.request(sessao.getFilme(), ImagemCapa.class);
-		
-		modelAndView.addObject("sessao", sessao);
-		modelAndView.addObject("carrinho", carrinho);		
-		modelAndView.addObject("imagemCapa", imagemCapa.orElse(new ImagemCapa()));		
-		modelAndView.addObject("tiposDeIngressos", TipoDeIngresso.values());
-		
-		return modelAndView;
-		
-	}
-	
 	
 		
 }

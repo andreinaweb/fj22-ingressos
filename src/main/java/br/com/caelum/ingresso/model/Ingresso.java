@@ -30,6 +30,14 @@ public class Ingresso {
 	@Enumerated(EnumType.STRING)
 	private TipoDeIngresso tipoDeIngresso;
 	
+	public TipoDeIngresso getTipoDeIngresso() {
+		return tipoDeIngresso;
+	}
+
+	public void setTipoDeIngresso(TipoDeIngresso tipoDeIngresso) {
+		this.tipoDeIngresso = tipoDeIngresso;
+	}
+
 	/**
 	* @deprecated hibernate only
 	*/
@@ -56,5 +64,7 @@ public class Ingresso {
 	public void setLugar(Lugar lugar) {
 		this.lugar = lugar;
 	}
+
+
 	
 }
