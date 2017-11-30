@@ -55,9 +55,10 @@ public class SessaoController {
 		Optional<ImagemCapa> imagemCapa = client.request(sessao.getFilme(), ImagemCapa.class);
 		
 		modelAndView.addObject("sessao", sessao);
-		modelAndView.addObject("carrinho", carrinho);		
+		modelAndView.addObject("carrinho", carrinho);	
 		modelAndView.addObject("imagemCapa", imagemCapa.orElse(new ImagemCapa()));		
 		modelAndView.addObject("tiposDeIngressos", TipoDeIngresso.values());
+		
 		
 		return modelAndView;
 		

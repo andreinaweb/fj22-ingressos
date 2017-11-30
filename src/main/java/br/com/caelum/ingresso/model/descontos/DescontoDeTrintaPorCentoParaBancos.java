@@ -18,8 +18,8 @@ public class DescontoDeTrintaPorCentoParaBancos implements Desconto{
 
 		@Override
 		public String getDescricao() {
-			// TODO Auto-generated method stub
-			return null;
+			
+			return "Bancário";
 		}
 	
 

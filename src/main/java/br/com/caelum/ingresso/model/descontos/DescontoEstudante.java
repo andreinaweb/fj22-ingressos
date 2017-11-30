@@ -14,7 +14,7 @@ public class DescontoEstudante implements Desconto{
 	@Override
 	public String getDescricao() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Estudante";
 	}
 
 }

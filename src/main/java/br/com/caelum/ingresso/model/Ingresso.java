@@ -9,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import br.com.caelum.ingresso.model.descontos.Desconto;
+//import br.com.caelum.ingresso.model.descontos.Desconto;//Comentado apos desconto se substituido por Tipo de Ingresso
 
 @Entity
 public class Ingresso {
