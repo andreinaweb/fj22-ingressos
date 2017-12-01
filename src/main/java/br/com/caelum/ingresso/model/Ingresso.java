@@ -45,8 +45,11 @@ public class Ingresso {
 	}
 	
 	public Ingresso(Sessao sessao, TipoDeIngresso tipoDeIngresso, Lugar lugar) {
+		
 		this.sessao = sessao;
+		this.tipoDeIngresso= tipoDeIngresso; //alteração recomendada pelo Cássio
 		this.preco = this.tipoDeIngresso.aplicaDesconto(sessao.getPreco());
+		
 	}
 	
 	public Sessao getSessao() {

@@ -13,7 +13,17 @@ public class Carrinho {
 	
 	private List<Ingresso> ingressos = new ArrayList<>();
 	
-	
+	//alteração recomendada pelo Cássio
+	public List<Ingresso> getIngressos() {
+		return ingressos;
+	}
+
+	//alteração recomendada pelo Cássio
+	public void setIngressos(List<Ingresso> ingressos) {
+		this.ingressos = ingressos;
+	}
+
+
 	public BigDecimal getTotal(){
 		
 		return ingressos.stream().map(Ingresso::getPreco).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
